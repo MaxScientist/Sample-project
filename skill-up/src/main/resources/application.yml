@@ -1,0 +1,14 @@
+server:
+  port: 8888
+spring:
+  profiles:
+    active: native
+  cloud:
+    config:
+      discovery:
+        enabled: true
+      server:
+        encrypt:
+          enabled: true
+        native:
+          search-locations: classpath:/static/organization/organization

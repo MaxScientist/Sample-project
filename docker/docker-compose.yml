@@ -1,0 +1,36 @@
+version: '2'
+services:
+  eurekaserver:
+    image: "mxsc4130/eurekasvr:udef"
+    ports:
+      - "8761:8761"
+  configserver:
+    image: "mxsc4130/confsvr:udef"
+    ports:
+      - "8888:8888"
+    environment:
+      EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
+      EUREKASERVER_PORT: "8761"
+      ENCRYPT_KEY: "IMSYMMETRIC"
+
+  database:
+    image: "postgres"
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=p0stgr@s
+      - POSTGRES_DB=skill_up
+  organization:
+    image: "mxsc4130/confsvr:udef"
+    ports:
+      - "8085:8085"
+    environment:
+      PROFILE: "default"
+      SERVER_PORT: "8085"
+      CONFIGSERVER_URI: "http://configserver:8888"
+      EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
+      EUREKASERVER_PORT: "8761"
+      CONFIGSERVER_PORT: "8888"
+      DATABASESERVER_PORT: "5432"
+      ENCRYPT_KEY: "IMSYMMETRIC"

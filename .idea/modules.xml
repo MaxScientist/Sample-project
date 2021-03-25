@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/skill-up/config-server.iml" filepath="$PROJECT_DIR$/skill-up/config-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/customer/customer.iml" filepath="$PROJECT_DIR$/customer/customer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eurekasvr/eurekasvr.iml" filepath="$PROJECT_DIR$/eurekasvr/eurekasvr.iml" />
+      <module fileurl="file://$PROJECT_DIR$/organization/organization.iml" filepath="$PROJECT_DIR$/organization/organization.iml" />
+      <module fileurl="file://$PROJECT_DIR$/parent-project.iml" filepath="$PROJECT_DIR$/parent-project.iml" />
+    </modules>
+  </component>
+</project>
